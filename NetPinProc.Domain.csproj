@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<VersionSuffix>1.0.1</VersionSuffix>
+		<PackageVersion>$(VersionSuffix)</PackageVersion>
+		<AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
+		<FileVersion>$(VersionSuffix)</FileVersion>
+		<Description>Pinball base class library with no dependencies for NetProc.Game</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IncludeSource>True</IncludeSource>
+		<PackageIcon>pinball.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>
+		<PackageOutputPath>.nuget</PackageOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="pinball.png" Pack="true" PackagePath="\"/>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+		<None Include="LICENSE.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="System.Text.Json" Version="5.0.2" />
+	</ItemGroup>
+
+</Project>
