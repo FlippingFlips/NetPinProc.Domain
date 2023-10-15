@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
 		<VersionSuffix>1.0.3</VersionSuffix>
+		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>
 		<PackageVersion>$(VersionSuffix)</PackageVersion>
 		<AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
 		<FileVersion>$(VersionSuffix)</FileVersion>
@@ -13,8 +14,7 @@
 		<IncludeSource>True</IncludeSource>
 		<PackageIcon>pinball.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>		
 		<PackageOutputPath>.nuget</PackageOutputPath>
 	</PropertyGroup>
 

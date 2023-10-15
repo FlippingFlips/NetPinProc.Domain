@@ -20,8 +20,7 @@ jobs:
       # dotnet nuget pack projects
       - name: Dotnet Pack - Nuget
         run: |
-            dotnet pack NetPinProc.Domain.csproj -c Release
-            dir
+            dotnet pack src -c Release
       # dotnet nuget push packages
       - name: Nuget_Domain
         run: dotnet nuget push "src/.nuget/NetPinProc.Domain.${VERSION}.nupkg" ${NUGETAPIKEY}
