@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<VersionSuffix>1.0.1</VersionSuffix>
+		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+		<VersionSuffix>1.0.3</VersionSuffix>
 		<PackageVersion>$(VersionSuffix)</PackageVersion>
 		<AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
 		<FileVersion>$(VersionSuffix)</FileVersion>
@@ -19,9 +19,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="pinball.png" Pack="true" PackagePath="\"/>
-		<None Include="README.md" Pack="true" PackagePath="\"/>
-		<None Include="LICENSE.md" Pack="true" PackagePath="\"/>
+		<None Include="..\pinball.png" Pack="true" PackagePath="\"/>
+		<None Include="..\README.md" Pack="true" PackagePath="\"/>
+		<None Include="..\LICENSE.md" Pack="true" PackagePath="\"/>
+		<None Include="..\.github\workflows\netpinproc.domain.release-nuget.yml" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 	
 	<ItemGroup>
