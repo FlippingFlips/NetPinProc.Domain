@@ -2,31 +2,41 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
-		<VersionSuffix>1.0.3</VersionSuffix>
+		<VersionSuffix>1.0.3.1</VersionSuffix>
+		<Description>Pinball base class library with no dependencies for NetProc.Game</Description>
 		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>
 		<PackageVersion>$(VersionSuffix)</PackageVersion>
 		<AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
 		<FileVersion>$(VersionSuffix)</FileVersion>
-		<Description>Pinball base class library with no dependencies for NetProc.Game</Description>
+		<PackageIconUrl>https://github.com/flipingflips/netpinproc.domain/pinball.png</PackageIconUrl>
+		<RepositoryUrl>https://github.com/flipingflips/netpinproc.domain</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/flipingflips/netpinproc.domain</PackageProjectUrl>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<IncludeSource>True</IncludeSource>
-		<PackageIcon>pinball.png</PackageIcon>
+		<IncludeSource>true</IncludeSource>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>		
+		<PackageIcon>pinball.png</PackageIcon>		
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>		
 		<PackageOutputPath>.nuget</PackageOutputPath>
 	</PropertyGroup>
 
+	<!--SINGLE DEPENDENCY System.Text.Json"-->
+	<ItemGroup>
+		<PackageReference Include="System.Text.Json" Version="5.0.2" />
+	</ItemGroup>
+
+	<!--LINK PACKAGE ASSETS-->
 	<ItemGroup>
 		<None Include="..\pinball.png" Pack="true" PackagePath="\"/>
 		<None Include="..\README.md" Pack="true" PackagePath="\"/>
-		<None Include="..\LICENSE.md" Pack="true" PackagePath="\"/>
-		<None Include="..\.github\workflows\netpinproc.domain.release-nuget.yml" Pack="true" PackagePath="\"/>
+		<None Include="..\LICENSE.md" Pack="true" PackagePath="\"/>		
 	</ItemGroup>
-	
+
+	<!--LINK WORKFLOW FILES TO PROJECT-->
 	<ItemGroup>
-		<PackageReference Include="System.Text.Json" Version="5.0.2" />
+		<None Include="..\.github\workflows\netpinproc.domain.debug-nuget.yml" Pack="true" PackagePath="\"/>
+		<None Include="..\.github\workflows\netpinproc.domain.release-nuget.yml" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
 </Project>
